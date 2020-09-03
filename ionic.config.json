@@ -1,0 +1,7 @@
+{
+  "name": "IonGex",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
