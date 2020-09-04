@@ -1,40 +1,24 @@
 <ion-app>
-  <ion-menu menuId="main-menu" contentId="main">
+  <ion-menu side="start" manuId="first" contentId="content1">
+    <ion-header>
+      <ion-toolbar>
+        <ion-item>
+          <ion-label>
+            <b>Welcome: User</b>
+          </ion-label>
+        </ion-item>
+      </ion-toolbar>
+    </ion-header>
     <ion-content>
-      <div class="menu-header-bg"></div>
-      <div class="header-content">
-        <img src="../assets/Yo.jpg" alt="">
-        <ion-label>
-          <h2>Dr. Armando Cajilema</h2>
-          <p>Desarrollador de Software</p>
-        </ion-label>
-      </div>
-      <div class="action-button">
-        <ion-button>
-          <ion-icon slot="start" name="add"></ion-icon> Add Branch
-        </ion-button>
-      </div>
-      <ion-list class="menu-items" lines="none">
-          <ion-item>
-            <ion-icon name="pie-chart-outline" routerLink="profile"></ion-icon>Dashboard
-          </ion-item>
-          <ion-item>
-            <ion-icon name="browsers-outline"></ion-icon>Post sessions
-          </ion-item>
-          <ion-item class="active">
-            <ion-icon name="flash"  routerLink="videos"></ion-icon>Live sessions
-          </ion-item>
-          <ion-item>
-            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>Messages
-          </ion-item>
-          <ion-item>
-            <ion-icon name="heart-outline"></ion-icon>Locum library
-          </ion-item>
-          <ion-item>
-            <ion-icon name="exit-outline"></ion-icon>Sign out
-          </ion-item>
-      </ion-list>
+<ion-list *ngFor="let page of pages">
+  <ion-menu-toggle auto-hide="true">
+<ion-item (click)="Goto(page)">
+  <ion-icon [name]="page.icon" slot="start"></ion-icon>
+  <ion-label>{{page.pagename}}</ion-label>
+</ion-item>
+  </ion-menu-toggle>
+</ion-list>
     </ion-content>
   </ion-menu>
-  <ion-router-outlet id="main"></ion-router-outlet>
-</ion-app>
+  <ion-router-outlet id="content1"></ion-router-outlet>
+</ion-app>"
