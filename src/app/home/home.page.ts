@@ -7,7 +7,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
-  
+ slides = [
+   {
+     img: 'assets/img/mujer.svg',
+     titulo: 'Una aplicacion hecha<br>para ti' 
+   },
+   {
+    img: 'assets/img/pastel.svg',
+    titulo: 'Obeten exelentes<br>beneficios' 
+  },
+  {
+    img: 'assets/img/dinero.svg',
+    titulo: 'Suscripción muy<br>cómoda' 
+  }
+ ]
 }
 
